@@ -1,0 +1,12 @@
+<!--display.wxml-->
+<view class="container">
+    <text>{{movieDetail.title}}</text>
+    <text>Rating: {{movieDetail.rating.average}} / {{movieDetail.ratings_count}}</text>
+    <view>{{movieDetail.countries}}</view>
+    <view>{{movieDetail.genres}} </view>
+    
+    <image class='img' src='{{movieDetail.images.large}}' mode='widthFix'></image>
+    <view class="summary">
+        <text class="summary">{{movieDetail.summary}}</text>
+    </view>
+</view>

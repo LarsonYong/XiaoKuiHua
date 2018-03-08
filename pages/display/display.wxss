@@ -1,0 +1,9 @@
+/* pages/display/display.wxss */
+.img {
+  width: 95%
+}
+.summary {
+  margin-top: 10px;
+  margin-left:  10px;
+  margin-right: 10px;
+}
