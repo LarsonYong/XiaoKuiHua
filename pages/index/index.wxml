@@ -12,9 +12,6 @@
                 <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
             </view>
             <view class="weui-tab__panel">
-                <!-- <view class="weui-tab__content" hidden="{{activeIndex != 0}}">选项一的内容</view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view> -->
             </view>
         </view>   
         <form bindsubmit="searchSubmit" action="">
@@ -36,18 +33,30 @@
         </view>
         
         </form>
-        <view class="weui-panel" hidden="{{activeIndex !=0}}">
+        <view class="weui-panel" hidden="{{searched ==0 || activeIndex != 0}}">
             <view class="weui-panel__hd">搜索结果</view>
+            <view hidden="{{gotResult}}">
+              <view  class="weui-loadmore">
+                <view class="weui-loading"></view>
+                <view class="weui-loadmore__tips">正在加载</view>
+              </view>
+            <view class="weui-loadmore weui-loadmore_line">
+              <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+            </view>
+            <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+              <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+            </view>
+        </view>
             <view class="weui-panel__bd">
                 <view class="weui-media-box weui-media-box_small-appmsg">
-                    <view wx:for="{{resData}}" class="weui-cells weui-cells_in-small-appmsg">
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                    <view bindtap='clickMovieDetail' data-hi="{{item}}"  wx:for="{{resData}}" wx:key="{{index}}" class="weui-cells weui-cells_in-small-appmsg">
+                        <view url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                             <view class="weui-cell__hd"><image src="{{icon20}}" style="width: 20px;height: 20px;margin-right: 5px" /></view>
                             <view class="weui-cell__bd weui-cell_primary">
-                                <view>《{{item.title}}》  （{{item.year}} {{item.rating.average}}）</view>
+                                <view>《{{item.title}}》  （{{item.year}}年  {{item.rating.average}}分）</view>
                             </view>
                             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
+                        </view>
                         
                     </view>
                 </view>

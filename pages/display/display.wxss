@@ -1,4 +1,5 @@
 /* pages/display/display.wxss */
+@import "../../weui.wxss";
 .img {
   width: 95%
 }
@@ -6,4 +7,16 @@
   margin-top: 10px;
   margin-left:  10px;
   margin-right: 10px;
+}
+.movieTitle {
+  width: 90%
+}
+.margTop {
+  margin-top: 20px;
+}
+.Mid {
+  text-align: center;
+}
+.page__hd {
+     padding: 20px; 
 }

@@ -1,0 +1,30 @@
+<!--pages/inTheathers/inTheathers.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">即将上映</view>
+        <!-- <view class="page__desc">九宫格</view> -->
+    </view>
+    <view class="page__bd">
+        <view hidden="{{gotResult}}" class="page__bd">
+        <view class="weui-loadmore">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+        </view>
+        <view class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+        </view>
+        <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>
+      </view>
+        <view hidden='{{gotResult != 1}}' class="weui-grids marg">
+            <block wx:for-items="{{movieArray2}}" wx:key="{{index}}">
+                <navigator bindtap='gotoDisplay' data-hi="{{movieArray2[index].id}}"  url="" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="img" src="{{movieArray2[index].images.small}}" />
+                    <view class="weui-grid__label">{{movieArray2[index].title}}</view>
+                    <view class='page__desc center'>豆瓣评分：{{movieArray2[index].rating.average}}</view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</view>

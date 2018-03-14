@@ -1,12 +1,62 @@
 <!--display.wxml-->
-<view class="container">
-    <text>{{movieDetail2.title}}</text>
-    <text>Rating: {{movieDetail2.rating.average}} / {{movieDetail2.ratings_count}}</text>
-    <view>{{movieDetail2.countries}}</view>
-    <view>{{movieDetail2.genres}} </view>
-    
-    <image class='img' src='{{movieDetail2.images.large}}' mode='widthFix'></image>
-    <view class="summary">
-        <text class="summary">{{movieDetail2.summary}}</text>
+
+<view class="page">
+    <view class="page__hd">
+         <view class="page__title">电影概略</view> 
+          <!-- <view class="page__desc Mid">概略</view>   -->
+         
+         
     </view>
-</view>
+    <view class="page__bd page__bd_spacing">
+         <view class="weui-cells__title margTop">{{}}</view> 
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">名称</view>
+                <view class="weui-cell__ft">{{Detail.title}}</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">原名</view>
+                <view class="weui-cell__ft">{{Detail.original_title}}</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">上映时间</view>
+                <view class="weui-cell__ft">{{Detail.year}}</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">类型</view>
+                <view class="weui-cell__ft">{{Detail.genres}}</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">豆瓣评分</view>
+                <view class="weui-cell__ft">{{Detail.rating.average}}</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">评分次数</view>
+                <view class="weui-cell__ft">{{Detail.collect_count}}</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">导演</view>
+                <view class="weui-cell__ft">{{Detail.directors[0].name}}</view>
+            </view>
+        </view>
+        <view  class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">主演</view>
+                <view class="weui-cell__ft">{{Detail.casts[0].name}} </view>
+            </view>
+        </view>
+        <button bindtap='clickMore' data-hi="{{Detail.id}}" class="weui-btn 90width" type="primary" >更多详细信息</button>
+    </view>
+  </view>

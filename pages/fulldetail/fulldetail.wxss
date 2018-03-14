@@ -1,0 +1,25 @@
+/* pages/fulldetail/fulldetail.wxss */
+@import "../../weui.wxss";
+.page__hd {
+     padding: 15px; 
+}
+.img {
+  margin-top: 15px;
+}
+.margTop {
+  margin-top: 15px;
+}
+.casts {
+  display:inline;
+  margin-right: 5px;
+}
+.castss{
+  word-spacing: 5px;
+  float: right;
+}
+.topLine {
+  border-top: 1px solid black
+}
+.margTopSm {
+  margin-top: 5px;
+}

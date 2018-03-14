@@ -95,3 +95,6 @@ button::after{
   right: 25%;
   text-align: center
 }
+.page__hd {
+     padding: 0; 
+}

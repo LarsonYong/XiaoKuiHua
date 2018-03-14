@@ -1,0 +1,47 @@
+<!--pages/fulldetail/fulldetail.wxml-->
+<view class="page">
+    <view hidden="{{Requested}}" class="page__bd">
+        <view class="weui-loadmore">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+        </view>
+        <view class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+        </view>
+        <view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line weui-loadmore__tips_in-dot"></view>
+        </view>
+    </view>
+    
+    <view hidden="{{Requested != 1}}" class="page__hd">
+    
+        <view  class="page__hd">
+    
+        <view class="page__title">{{movieFullDetail.title}}</view>
+        <view class="page__desc">导演：{{movieFullDetail.directors[0].name}}</view>
+        <image class="weui-article__img img " src='{{movieFullDetail.images.large}}' mode='widthFix'></image>
+        <view class="margTop">
+        <view class="page__desc casts">主演：</view>
+        <view wx:for="{{movieFullDetail.casts}}" wx:key="{{index}}" class="page__desc casts">{{item.name }} </view>
+        </view>
+        <view class="page__desc casts">类型：</view>
+        <view class="page__desc casts">{{movieFullDetail.genres}} </view>
+        <view>
+        <view class="page__desc casts">地区：</view>
+        <view class="page__desc casts">{{movieFullDetail.countries }} </view>
+        </view>
+        <view>
+        <view class="page__desc casts">豆瓣评分：</view>
+        <view class="page__desc casts">{{movieFullDetail.rating.average }} </view>
+        </view>
+        <view>
+        <view class="page__desc casts">评分总数：</view>
+        <view class="page__desc casts">{{movieFullDetail.ratings_count }} </view>
+        </view>
+        <view class='margTop topLine'>
+        <view class="weui-article__title margTopSm">电影介绍：</view>
+        <view class="weui-article__h3 margTopSm">  {{  movieFullDetail.summary }} </view>
+        </view>
+    </view>
+    </view>
+</view>

@@ -2,7 +2,10 @@
   "pages":[
     "pages/index/index",
     "pages/display/display",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/fulldetail/fulldetail",
+    "pages/inTheathers/inTheathers",
+    "pages/comingSoon/comingSoon"
   ],
   "window":{
     "backgroundTextStyle":"light",

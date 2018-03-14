@@ -1,0 +1,41 @@
+/* pages/comingSoon/comingSoon.wxss */
+@import "../../weui.wxss";
+.page__hd {
+     padding: 40px; 
+}
+.img {
+  margin-top: 15px;
+}
+.margTop {
+  margin-top: 15px;
+}
+.casts {
+  display:inline;
+  margin-right: 5px;
+}
+.castss{
+  word-spacing: 5px;
+  float: right;
+}
+.topLine {
+  border-top: 1px solid black
+}
+.margTopSm {
+  margin-top: 5px;
+}
+.img {
+  width: 100%;
+  margin-top: 2px;
+  height: 200px;
+}
+.weui-grid {
+  padding: 2px 2px;
+  height: 270px;
+}
+.center {
+  text-align: center
+}
+.marg {
+  margin-left: 2px;
+  margin-right: 2px;
+}
